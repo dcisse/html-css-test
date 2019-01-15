@@ -283,6 +283,87 @@ header .home:before, header .user-name:before{
 }
 
 
+
+#registration{
+    height: 400px;
+}
+
+#registration h1{
+    color: #343434;
+    margin: 0;
+    font-weight: 700;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+
+#registration .left{
+    box-sizing: border-box;
+    float: left;
+    width: 400px;   
+}
+#registration .left label, #registration .right legend{
+color: black;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+#registration .right{
+    box-sizing: border-box;
+    float: right;
+    width: 600px;
+    padding-left: 50px;
+}
+
+input[type="text"],
+input[type="email"]{
+  width: 100%;
+  border: 2px solid #c6c9cc;
+  border-radius: 3px;
+  display: block;
+  margin: 5px 0 25px 0;
+  padding: 5px 8px;
+  height: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus{
+    color: #648880;
+    transition: 0.1s ease;
+border: 2px solid #33a047;
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid gray;
+  }
+  input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+  }
+   input[type="radio"]:checked:before {
+    background: black;      
+  }
+  input[type="radio"]:hover,
+  input[type="radio"]:checked {
+    border-color:green;
+    box-shadow: 0 0 3px green !important;
+    -moz-box-shadow: 0 0 3px green !important;
+    -webkit-box-shadow: 0 0 3px green !important;
+  }
+  input[type="checkbox"]:checked {
+    border: 2px solid #2c4358;
+  }
+
+
+
 footer {
     width: 100%;
     position: absolute;
