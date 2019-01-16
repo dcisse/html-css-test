@@ -8,8 +8,7 @@ body{
 	padding: 0;
 	margin: 0;
 	background-color: #ffffff;
-    color: #888;
-    
+    color: #888;   
 }
 
 .container{
@@ -190,11 +189,13 @@ header .home:before, header .user-name:before{
 	float: left;
     width: 180px;    
 }
+
 .box1 strong{
     color: #343434;
     font-size: 15px;
     font-weight: bold;
 }
+
 .boxes-left a, .boxes-right a{
 	font-size: 15px;
     color:#777;
@@ -282,8 +283,6 @@ header .home:before, header .user-name:before{
     position: relative;
 }
 
-
-
 #registration{
     height: 400px;
 }
@@ -301,67 +300,181 @@ header .home:before, header .user-name:before{
     float: left;
     width: 400px;   
 }
-#registration .left label, #registration .right legend{
-color: black;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 15px;
-}
+
 #registration .right{
     box-sizing: border-box;
     float: right;
     width: 600px;
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
-input[type="text"],
-input[type="email"]{
+#registration .left label, #registration .right legend{
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+#registration .left label{
+    display: block;
+    padding-bottom: 25px;
+}
+#registration .right div{
+    padding-bottom: 60px;
+}
+
+#registration .left input[type="text"],
+#registration .left input[type="email"]{
   width: 100%;
   border: 2px solid #c6c9cc;
   border-radius: 3px;
   display: block;
-  margin: 5px 0 25px 0;
-  padding: 5px 8px;
+  padding: 5px 0;
   height: 20px;
+  margin: 5px 0;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus{
+#registration .left input[type="text"]:focus,
+#registration .left input[type="email"]:focus{
     color: #648880;
     transition: 0.1s ease;
-border: 2px solid #33a047;
+    border: 2px solid #33a047;
+}
+.help-text {
+    color: #343434;
+    display: none;
 }
 
-input[type='radio'] {
-    -webkit-appearance: none;
-    width: 17px;
-    height: 17px;
-    border-radius: 50%;
-    outline: none;
-    border: 1px solid gray;
-  }
-  input[type='radio']:before {
-    content: '';
+#registration .left input:optional + .help-optional::after {
+    content: 'Optional';
+    color: #ccc; 
+    font-family: arial;
     display: block;
-    width: 60%;
-    height: 60%;
-    margin: 20% auto;
-    border-radius: 50%;
-  }
-   input[type="radio"]:checked:before {
-    background: black;      
-  }
-  input[type="radio"]:hover,
-  input[type="radio"]:checked {
-    border-color:green;
-    box-shadow: 0 0 3px green !important;
-    -moz-box-shadow: 0 0 3px green !important;
-    -webkit-box-shadow: 0 0 3px green !important;
-  }
-  input[type="checkbox"]:checked {
-    border: 2px solid #2c4358;
-  }
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    bottom: 58px;
+    left: 350px;
+}
+  .full-name:focus + .help-text {
+    color: #ccc;
+    display: block; 
+    font-family: arial;
+    font-size: 14px;
+    line-height: 1;
+    }
 
+legend{
+    padding-bottom: 5px;
+}
+.check-boxes label,
+.radio-buttons label {
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer; 
+    font-size: 14px;
+    padding-right: 10px;   
+}
+  
+.check-boxes label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+.check-boxes .day {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid #c6c9cc;
+    border-radius: 3px;     
+}
+
+.check-boxes label:hover input ~ .day,
+.check-boxes label input:checked ~ .day,
+.radio-buttons label:hover input ~ .ingroup,
+.radio-buttons label input:checked ~ .ingroup {
+    transition: 0.1s ease;
+    border: 2px solid #33a047;
+    box-shadow: 0 0 3px #33a047;
+}
+  
+.check-boxes .day:after,
+.radio-buttons .ingroup:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-boxes label input:checked ~ .day:after,
+.radio-buttons label input:checked ~ .ingroup:after {
+    display: block;
+} 
+
+.check-boxes label .day:after {
+    left: 7px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(45deg);
+}
+
+.radio-buttons label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-buttons .ingroup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    border: 2px solid #c6c9cc;
+    border-radius: 50%;
+}
+
+.radio-buttons label .ingroup:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: black;
+}
+
+input[type='submit'] {
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;   
+}
+
+.btn{
+    float: right;
+}
+.btn1{
+    color: black;
+    font-weight: bold;
+}
+
+.btn2{
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    margin-right: 15px;
+}
 
 
 footer {
