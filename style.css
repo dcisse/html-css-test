@@ -7,7 +7,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
-	background-color: #ffffff;
+	background-color: #fff;
     color: #888;   
 }
 
@@ -476,6 +476,44 @@ input[type='submit'] {
     margin-right: 15px;
 }
 
+#table-bakers{
+    padding-bottom: 90px;
+}
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%; 
+}
+  
+td, th {
+    border: 1px  #ddd;
+}
+tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+tr:hover {
+    background-color: #c4debc;
+    cursor: pointer;
+}
+th {
+    padding: 10px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    height:40px;
+}
+td{
+    text-align: left;
+    padding: 15px;
+}
+caption { 
+    display: table-caption;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
 
 footer {
     width: 100%;
